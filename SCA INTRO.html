@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LFU Page Replacement Algorithm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffffcd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #555;
+            font-size: 1.2em;
+        }
+    </style>
+
+
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Navigation Bar</title>
+	<style type="text/css">
+		*{
+			text-decoration: none;
+		}
+		.navbar{
+			background: crimson; font-family: calibri; padding-right: 15px;padding-left: 15px;
+		}
+		.navdiv{
+			display: flex; align-items: center; justify-content: space-between;
+		}
+		.logo a{
+			font-size: 35px; font-weight: 600; color: white;
+		}
+		li{
+			list-style: none; display: inline-block;
+		}
+		li a{
+			color: white; font-size: 18px; font-weight: bold; margin-right: 25px;
+		}
+		button{
+			background-color: rgb(81, 4, 4); margin-left: 10px; border-radius: 10px; padding: 10px; ; width: 90px; 
+		}
+		button a{
+			color: white; font-weight: bold; font-size: 15px;
+		}
+	</style>
+</head>
+<body>
+    <nav class="navbar">
+		<div class="navdiv">
+			<div class="logo"><a href="#">Operating Systems</a> </div>
+			<ul>
+				<button><a href="FIFO.html">FIFO SIM</a></button>
+				<button><a href="LRU.html">LRU SIM</a></button>
+                <button><a href="LFU.html">LFU SIM</a></button>
+				<button><a href="FIFO_secondchance.html">SCA SIM</a></button>
+			</ul>
+		</div>
+	</nav>
+
+    <div class="container">
+        <h1>LFU Page Replacement Algorithm</h1>
+        <p>
+            Second Chance, also known as the Clock algorithm presents a more straightforward approach to page replacement. 
+            It introduces a reference bit to each page entry, representing whether the page has been recently referenced. 
+            When a page needs replacement, Second Chance scans the pages, and upon encountering a page with the reference bit set 
+            to 0, it is chosen for replacement. If the reference bit is 1, indicating recent access, the algorithm provides the page 
+            a "second chance" by resetting the bit and moving on to the next page in the queue.
+        <br>
+        <br>Advantages:Offers a balance between FIFO and LRU. Can improve performance over FIFO in scenarios with some access locality, 
+            especially random access with occasional bursts of recently used pages. Less overhead compared to LRU.
+        <br>Disadvantages:  More complex than FIFO due to the reference bit mechanism. Might not achieve the optimal hit ratio 
+            of LRU, particularly under strong working set behavior.
+        </p>
+    </div>
+
+    <button><a href="FIFO_secondchance.html">SCA SIM</a></button>
+
+</body>
+</html>

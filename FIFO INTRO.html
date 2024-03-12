@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIFO Page Replacement Algorithm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffffcd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #555;
+            font-size: 1.2em;
+        }
+    </style>
+
+
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Navigation Bar</title>
+	<style type="text/css">
+		*{
+			text-decoration: none;
+		}
+		.navbar{
+			background: crimson; font-family: calibri; padding-right: 15px;padding-left: 15px;
+		}
+		.navdiv{
+			display: flex; align-items: center; justify-content: space-between;
+		}
+		.logo a{
+			font-size: 35px; font-weight: 600; color: white;
+		}
+		li{
+			list-style: none; display: inline-block;
+		}
+		li a{
+			color: white; font-size: 18px; font-weight: bold; margin-right: 25px;
+		}
+		button{
+			background-color: rgb(81, 4, 4); margin-left: 10px; border-radius: 10px; padding: 10px; ; width: 90px; 
+		}
+		button a{
+			color: white; font-weight: bold; font-size: 15px;
+		}
+	</style>
+</head>
+<body>
+    <nav class="navbar">
+		<div class="navdiv">
+			<div class="logo"><a href="#">Operating Systems</a> </div>
+			<ul>
+				<button><a href="FIFO.html">FIFO SIM</a></button>
+				<button><a href="LRU.html">LRU SIM</a></button>
+                <button><a href="LFU.html">LFU SIM</a></button>
+				<button><a href="FIFO_secondchance.html">SCA SIM</a></button>
+			</ul>
+		</div>
+	</nav>
+
+    <div class="container">
+        <h1>FIFO Page Replacement Algorithm</h1>
+        <p>
+            First-In, First-Out (FIFO) page replacement algorithm offers a straightforward approach to paging. When a page fault 
+            occurs, signifying a requested page is not currently in memory, FIFO prioritizes evicting the oldest loaded page. 
+            This eviction strategy adheres to a queueing system, where the page loaded earliest resides at the front and is 
+            subsequently the first to be replaced.While FIFO boasts advantages in terms of implementation simplicity and low overhead 
+            due to its clear logic, it can be susceptible to Belady's anomaly. This anomaly highlights scenarios where increasing 
+            available memory frames can counterintuitively lead to a rise in page faults. Additionally, FIFO makes no distinction 
+            regarding a page's recent usage patterns, potentially removing pages that may be needed soon.Therefore, FIFO is best 
+            suited for workloads exhibiting strong temporal locality, where recently used pages are likely to be accessed again in 
+            the near future.
+
+        <br>
+        <br>Advantages: Simple to implement, low overhead.
+        <br>Disadvantages: Poor performance under random access and working set models. Does not consider access locality, 
+            leading to unnecessary page evictions.
+        </p>
+    </div>
+
+    <button><a href="FIFO.html">FIFO SIM</a></button>
+
+</body>
+</html>
